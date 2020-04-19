@@ -1,9 +1,3 @@
-const numbersAllowed = {
-  min: Math.pow(-2, 31),
-  max: Math.pow(2, 31) - 1,
-};
-
-
 const reverse = x => {
   let arr = Array.from(String(x)).reverse();
   if (arr[arr.length -1] === '-') {
@@ -15,6 +9,11 @@ const reverse = x => {
     return 0;
   }
   return number;
+};
+
+const numbersAllowed = {
+  min: Math.pow(-2, 31),
+  max: Math.pow(2, 31) - 1,
 };
 
 module.exports = reverse;
