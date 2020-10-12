@@ -8,9 +8,10 @@ var twoSum = function(numbers, target) {
     let right = numbers.length - 1;
     
     while (left <= right) {
-        if (numbers[left]+numbers[right] === target) {
+        const currentSum = numbers[left] + numbers[right]; 
+        if (currentSum === target) {
             return [left+1, right+1];
-        } else if (numbers[left]+numbers[right] < target) {
+        } else if (target > currentSum) {
             left++;
         } else {
             right--;
